@@ -1,4 +1,4 @@
-package com.juliofhiguera.app_ut2_03
+package com.example.app_ut2_03
 
 import org.junit.Test
 
