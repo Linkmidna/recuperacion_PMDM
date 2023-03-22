@@ -1,4 +1,4 @@
-package com.juliofhiguera.app_ut2_02
+package com.juliofhiguera.app_ut2_03
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.juliofhiguera.app_ut2_02.R
 
 class MainActivity : AppCompatActivity() {
     private val datos = linkedMapOf<String, Int>(
