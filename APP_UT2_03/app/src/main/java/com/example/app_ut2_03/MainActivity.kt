@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             contador++
             resultado.text=contador.toString()
         }
-        contar.setOnClickListener{
+        mostrar.setOnClickListener{
             contador++
             resultado.text=contador.toString()
             Toast.makeText(this,"Has pulsado el boton $contador veces.",Toast.LENGTH_SHORT).show()
