@@ -41,10 +41,36 @@
 
             <TextView
                 android:id="@+id/textViewDescripcionDetalle"
-                android:padding="10sp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
+                android:padding="16dp"
+                android:layout_weight="1"
                 android:text="Decripcion" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonSumarVoto"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/green"
+                    android:text="@string/positivo" />
+
+                <Button
+                    android:id="@+id/buttonRestarVoto"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/red"
+                    android:text="@string/negativo" />
+            </LinearLayout>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

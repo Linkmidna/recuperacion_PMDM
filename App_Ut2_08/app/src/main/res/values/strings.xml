@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">App_Ut2_08</string>
+    <string name="reserva">Reserva tus entradas</string>
+    <string name="zoologico">Zoológico</string>
+    <string name="reptario">Reptario</string>
+    <string name="visita_guiada">Visita guiada</string>
+    <string name="adultos">Adultos</string>
+    <string name="niños">Niños</string>
+    <string name="precio_total">Precio total</string>
+    <string name="siguiente">Siguiente</string>
+</resources>

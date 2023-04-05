@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">App_UT2_06</string>
+    <string name="positivo">VOTO POSITIVO</string>
+    <string name="negativo">VOTO NEGATIVO</string>
 </resources>

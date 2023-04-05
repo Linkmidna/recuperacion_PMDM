@@ -1,10 +1,12 @@
 package com.example.app_ut2_07
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +17,17 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
     private lateinit var recyclerViewAnimales: RecyclerView
+
+    private val segundaActivityLauncher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult())
+        {
+            if(it.resultCode == Activity.RESULT_OK){
+                val voto = it.data?.getIntExtra("voto", 0)?:0
+                val nombre = it.data?.getStringExtra("animal")?:""
+                (recyclerViewAnimales.adapter as AnimalAdapter).CambiarVoto(nombre, voto)
+                recyclerViewAnimales.adapter?.notifyDataSetChanged()
+            }
+        }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -38,9 +51,13 @@ class MainActivity : AppCompatActivity() {
         //Toast.makeText(this, animal.descripcion, Toast.LENGTH_LONG).show()
         val intent = Intent(applicationContext, ActivityDetalleAnimal::class.java)
         intent.putExtra("animal", animal)
-        startActivity(intent)
+        //startActivity(intent)
+        segundaActivityLauncher.launch(intent)
 
     }
+
+
+
 
     private fun dialogoNuevoAnimal()
     {

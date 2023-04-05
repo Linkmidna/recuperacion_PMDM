@@ -50,4 +50,9 @@ class AnimalAdapter (private val onClickAdapter: (Animal) -> Unit) : RecyclerVie
         listaAnimales.add(animal)
         notifyDataSetChanged()
     }
+
+    fun CambiarVoto(nombre : String, voto : Int){
+        val animal = listaAnimales.first{a -> a.nombre == nombre}
+        animal.votos += voto;
+    }
 }
