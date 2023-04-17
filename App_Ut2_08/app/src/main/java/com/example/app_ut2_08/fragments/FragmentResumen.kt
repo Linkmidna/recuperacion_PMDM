@@ -5,11 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
+import com.example.app_ut2_08.modelo.ReservaZooViewModel
 import com.example.app_ut2_08.R
 import com.example.app_ut2_08.databinding.FragmentResumenBinding
 
 class FragmentResumen : Fragment() {
+    private val viewModelCompartido: ReservaZooViewModel by activityViewModels()
 
     private lateinit var binding : FragmentResumenBinding
     override fun onCreateView(
@@ -26,6 +29,7 @@ class FragmentResumen : Fragment() {
 
         val botonReservar = binding.botonReservar
         botonReservar.setOnClickListener {
+            viewModelCompartido.resetearReserva()
             view.findNavController().navigate(R.id.fragmentInicio)
         }
     }

@@ -6,12 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
+import com.example.app_ut2_08.modelo.ReservaZooViewModel
 import com.example.app_ut2_08.R
 import com.example.app_ut2_08.databinding.FragmentFechaBinding
 import java.util.*
 
 class FragmentFecha : Fragment() {
+    private val viewModelCompartido: ReservaZooViewModel by activityViewModels()
+
     private lateinit var binding : FragmentFechaBinding
 
     override fun onCreateView(
