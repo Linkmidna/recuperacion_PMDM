@@ -8,4 +8,8 @@
     <string name="niños">Niños</string>
     <string name="precio_total">Precio total</string>
     <string name="siguiente">Siguiente</string>
+    <string name="reservar">Reservar</string>
+    <string name="fecha">Fecha seleccionada</string>
+    <string name="tipo_entrada">Tipo de entrada</string>
+    <string name="personas">Número de personas</string>
 </resources>

@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentInicio">
 
+    <fragment
+        android:id="@+id/fragmentInicio"
+        android:name="com.example.app_ut2_08.fragments.FragmentInicio"
+        android:label="Inicio" >
+        <action
+            android:id="@+id/action_fragmentInicio_to_fragmentPersonas"
+            app:destination="@id/fragmentPersonas" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentFecha"
+        android:name="com.example.app_ut2_08.fragments.FragmentFecha"
+        android:label="Fecha" >
+        <action
+            android:id="@+id/action_fragmentFecha_to_fragmentResumen"
+            app:destination="@id/fragmentResumen" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPersonas"
+        android:name="com.example.app_ut2_08.fragments.FragmentPersonas"
+        android:label="Personas" >
+        <action
+            android:id="@+id/action_fragmentPersonas_to_fragmentFecha"
+            app:destination="@id/fragmentFecha" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentResumen"
+        android:name="com.example.app_ut2_08.fragments.FragmentResumen"
+        android:label="Resumen" >
+        <action
+            android:id="@+id/action_fragmentResumen_to_fragmentInicio"
+            app:destination="@id/fragmentInicio" />
+    </fragment>
 </navigation>

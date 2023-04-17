@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import com.example.app_ut2_08.R
 import com.example.app_ut2_08.databinding.FragmentPersonasBinding
 
@@ -34,6 +35,10 @@ class FragmentPersonas : Fragment() {
             maxValue = 5
             value = 0
             wrapSelectorWheel = false
+        }
+        val botonFecha = binding.botonSiguiente
+        botonFecha.setOnClickListener {
+            view.findNavController().navigate(R.id.fragmentFecha)
         }
     }
 }
