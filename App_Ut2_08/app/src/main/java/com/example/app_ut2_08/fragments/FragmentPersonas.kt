@@ -49,7 +49,7 @@ class FragmentPersonas : Fragment() {
             wrapSelectorWheel = false
 
             setOnValueChangedListener {_, _, nuevo
-                -> viewModelCompartido.setNumeroAdultos(nuevo)
+                -> viewModelCompartido.setNumeroNinos(nuevo)
             }
         }
         val botonFecha = binding.botonSiguiente

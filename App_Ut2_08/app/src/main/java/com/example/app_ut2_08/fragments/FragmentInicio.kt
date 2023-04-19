@@ -36,7 +36,7 @@ class FragmentInicio : Fragment()
     fun tipoVisita(tipo: String)
     {
         viewModelCompartido.setTipoReserva(tipo)
-        findNavController().navigate(R.id.fragmentPersonas)
+        findNavController().navigate(R.id.action_fragmentInicio_to_fragmentPersonas)
     }
 
 }

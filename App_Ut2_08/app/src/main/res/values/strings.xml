@@ -6,10 +6,12 @@
     <string name="visita_guiada">Visita guiada</string>
     <string name="adultos">Adultos</string>
     <string name="niños">Niños</string>
-    <string name="precio_total">Precio total</string>
+    <string name="precio_total">Total: %s</string>
     <string name="siguiente">Siguiente</string>
     <string name="reservar">Reservar</string>
     <string name="fecha">Fecha seleccionada</string>
     <string name="tipo_entrada">Tipo de entrada</string>
     <string name="personas">Número de personas</string>
+    <string name="total_personas">Adultos: %s  Niños: %s</string>
+    <string name="total_fecha">%s-%s-%s</string>
 </resources>

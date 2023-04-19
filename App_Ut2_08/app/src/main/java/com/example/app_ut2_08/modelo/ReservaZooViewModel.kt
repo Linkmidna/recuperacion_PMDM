@@ -3,6 +3,7 @@ package com.example.app_ut2_08.modelo
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import java.text.SimpleDateFormat
 import java.util.*
 
 
@@ -11,9 +12,7 @@ private const val PRECIO_NINO = 2.0
 
 class ReservaZooViewModel: ViewModel() {
 
-    init {
-        resetearReserva()
-    }
+
 
     private val _tipoReserva = MutableLiveData<String>()
     private val _fecha = MutableLiveData<Calendar>()
@@ -26,7 +25,9 @@ class ReservaZooViewModel: ViewModel() {
     val numeroAdultos: LiveData<Int> = _numeroAdultos
     val numeroNinos: LiveData<Int> = _numeroNinos
     val precio: LiveData<Double> = _precio
-
+    init {
+        resetearReserva()
+    }
     fun setTipoReserva(tipo: String) {
         _tipoReserva.value = tipo
     }
@@ -67,4 +68,10 @@ class ReservaZooViewModel: ViewModel() {
         _tipoReserva.value = ""
         actualizarPrecio()
     }
+
+    fun obtenerFecha(): String {
+        val df = SimpleDateFormat("dd-MM-yyyy ")
+        return df.format(fecha.value!!.getTime())
+    }
+
 }

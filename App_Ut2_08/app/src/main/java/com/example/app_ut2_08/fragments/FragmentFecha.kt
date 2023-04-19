@@ -30,11 +30,16 @@ class FragmentFecha : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.viewModel = viewModelCompartido
+        binding.lifecycleOwner = viewLifecycleOwner
+
         val hoy = Calendar.getInstance()
         binding.datePicker.init(hoy.get(Calendar.YEAR), hoy.get(Calendar.MONTH),
-            hoy.get(Calendar.DAY_OF_MONTH)) { view, year, month, day ->
-            val mensaje = "Fecha: $day/${month+1}/$year"
-            Toast.makeText(context, mensaje, Toast.LENGTH_SHORT).show()
+            hoy.get(Calendar.DAY_OF_MONTH))
+        { _, year, month, day ->
+            var fecha = Calendar.getInstance()
+            fecha.set(year, month, day)
+            viewModelCompartido.setFecha(fecha)
         }
 
         val botonResumen = binding.botonSiguiente

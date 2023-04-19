@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginTop="16dp"
-                android:text="@string/precio_total"
+                android:text="@{@string/precio_total(viewModel.precio)}"
                 android:textAppearance="?attr/textAppearanceHeadline6" />
             <Button
                 android:id="@+id/botonSiguiente"
