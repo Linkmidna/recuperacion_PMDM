@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Examen_Abril_Julio_F</string>
+    <string name="opcion_interpretes">Intérpretes</string>
+    <string name="opcion_favoritos">Favoritos</string>
+    <string name="Jurado">Jurado</string>
+    <string name="Televoto">Televoto</string>
+    <string name="Demoscopico">Demoscópico</string>
+</resources>
