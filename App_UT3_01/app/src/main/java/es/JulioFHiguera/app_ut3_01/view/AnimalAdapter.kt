@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import es.JulioFHiguera.app_ut3_01.R
 import es.JulioFHiguera.app_ut3_01.databinding.ItemAnimalBinding
 import es.JulioFHiguera.app_ut3_01.model.Animal
@@ -22,6 +23,7 @@ class AnimalAdapter(private val listaAnimales: List<Animal>,
         {
             binding.textViewNombreAnimal.text = animal.nombre
            // binding.imageViewFotoAnimal.setImageResource(animal.imagenId)
+            binding.imageViewFotoAnimal.load("https://aplicaciones.ivanlorenzo.es/pmdm/animales/${animal.imagenURL}.png")
             binding.textViewVotos.text = "${animal.votos} ${if(animal.votos==1) "voto" else "votos"}"
             binding.layout.setOnClickListener { onClickAnimal(animal) }
         }
@@ -42,7 +44,4 @@ class AnimalAdapter(private val listaAnimales: List<Animal>,
     }
 
     override fun getItemCount(): Int = listaAnimales.size
-
-
-
 }

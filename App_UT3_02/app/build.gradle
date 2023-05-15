@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace "es.JulioFHiguera.app_ut3_01"
+    namespace 'com.example.app_ut3_02'
     compileSdk 33
 
     defaultConfig {
-        applicationId "es.JulioFHiguera.app_ut3_01"
+        applicationId "com.example.app_ut3_02"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -30,7 +30,6 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-
     buildFeatures {
         viewBinding = true
     }

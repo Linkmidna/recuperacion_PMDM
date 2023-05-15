@@ -24,6 +24,8 @@ class DetalleAnimalActivity : AppCompatActivity()
         binding.textViewDescripcion.text = animal.descripcion
         binding.textViewDescripcion.movementMethod = ScrollingMovementMethod()
        // binding.imageViewAnimal.setImageResource(animal.imagenId)
+        binding.imageViewAnimal.setImageResource(resources.getIdentifier(animal.imagenURL, "drawable", packageName))
+
 
         binding.imageViewFavorito.setOnClickListener {
             binding.imageViewFavorito.setColorFilter(Color.parseColor("#FFDAA95E"))
